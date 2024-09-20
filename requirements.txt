@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+asyncpg
+sqlalchemy[asyncio]
+databases
+pydantic
+passlib[bcrypt] # для хеширования паролей
+python-jose[cryptography] # для JWT токенов
+aiogram # для Telegram-бота
