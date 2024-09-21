@@ -2,3 +2,7 @@ fastapi
 uvicorn
 asyncpg
 sqlalchemy[asyncio]
+python-jose[cryptography]
+passlib[crypt]
+pydantic
+jose

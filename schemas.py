@@ -25,18 +25,29 @@ class Note(NoteBase):
         orm_mode = True
 
 
-# Схема для пользователя
-class UserBase(BaseModel):
+# Схема для создания пользователя
+class UserCreate(BaseModel):
     username: str
     email: str
-
-
-class UserCreate(UserBase):
     password: str
 
 
-class User(UserBase):
+# Схема для отображения пользователя
+class User(BaseModel):
     id: int
+    username: str
+    email: str
 
     class Config:
         orm_mode = True
+
+
+# Схема для токена
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+
+
+# Данные для токена
+class TokenData(BaseModel):
+    username: Optional[str] = None
