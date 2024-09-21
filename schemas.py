@@ -7,6 +7,7 @@ from datetime import datetime
 class NoteBase(BaseModel):
     title: str
     content: str
+    tags: Optional[List[str]] = []
 
 
 # Схема для создания заметок
